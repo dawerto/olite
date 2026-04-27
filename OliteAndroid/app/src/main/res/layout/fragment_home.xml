@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoApp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <!-- Toolbar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp">
+
+            <ImageButton
+                android:id="@+id/btnMenu"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_menu"
+                app:tint="@color/marronTierra" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/dancing_script"
+                android:gravity="center"
+                android:text="Olité"
+                android:textColor="@color/colorLogoNaranja"
+                android:textSize="28sp" />
+
+            <ImageButton
+                android:id="@+id/btnBuscar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_search"
+                app:tint="@color/marronTierra" />
+
+        </LinearLayout>
+
+        <!-- Banner ViewPager2 -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerBanner"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp" />
+
+        <me.relex.circleindicator.CircleIndicator3
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            app:ci_drawable="@color/colorLogoNaranja"
+            app:ci_drawable_unselected="@color/textoSecundario"
+            app:ci_height="6dp"
+            app:ci_width="6dp" />
+
+        <!-- Destacados -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Destacados"
+            android:textColor="@color/colorLogoNaranja"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="Novedades Olité"
+            android:textColor="@color/marronTierra"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDestacados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <!-- Categorías -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Categorías"
+            android:textColor="@color/colorLogoNaranja"
+            android:textSize="20sp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            app:singleLine="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHigiene"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Higiene"
+                android:textColor="@color/marronTierra"
+                app:chipBackgroundColor="@color/rosaPalido"
+                app:chipStrokeWidth="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipLimpieza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limpieza"
+                android:textColor="@color/marronTierra"
+                app:chipBackgroundColor="@color/verdeOliva"
+                app:chipStrokeWidth="0dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipCuidado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuidado"
+                android:textColor="@color/marronTierra"
+                app:chipBackgroundColor="@color/rosaPalido"
+                app:chipStrokeWidth="0dp" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Oferta especial -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/cardGris"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Oferta especial"
+                        android:textColor="@color/marronTierra"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="10% en tu primer pedido"
+                        android:textColor="@color/textoSecundario"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVerMas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ver más"
+                    android:textColor="@color/blanco"
+                    app:backgroundTint="@color/colorLogoNaranja"
+                    app:cornerRadius="24dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

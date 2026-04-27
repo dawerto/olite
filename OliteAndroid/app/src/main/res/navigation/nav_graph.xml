@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.olite.app.ui.auth.LoginFragment"
+        android:label="Login" />
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.olite.app.ui.auth.RegisterFragment"
+        android:label="Registro" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.olite.app.ui.home.HomeFragment"
+        android:label="Inicio" />
+
+    <fragment
+        android:id="@+id/productosFragment"
+        android:name="com.olite.app.ui.productos.ProductosFragment"
+        android:label="Catálogo" />
+
+    <fragment
+        android:id="@+id/productoDetalleFragment"
+        android:name="com.olite.app.ui.productos.ProductoDetalleFragment"
+        android:label="Detalle">
+        <argument
+            android:name="idProducto"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/carritoFragment"
+        android:name="com.olite.app.ui.carrito.CarritoFragment"
+        android:label="Carrito" />
+
+    <fragment
+        android:id="@+id/pedidosFragment"
+        android:name="com.olite.app.ui.pedidos.PedidosFragment"
+        android:label="Pedidos" />
+
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.olite.app.ui.perfil.PerfilFragment"
+        android:label="Perfil" />
+
+    <fragment
+        android:id="@+id/adminProductosFragment"
+        android:name="com.olite.app.ui.admin.AdminProductosFragment"
+        android:label="Admin Productos" />
+
+    <fragment
+        android:id="@+id/adminProductoEditorFragment"
+        android:name="com.olite.app.ui.admin.AdminProductoEditorFragment"
+        android:label="Editor producto">
+        <argument
+            android:name="idProducto"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminUsuariosFragment"
+        android:name="com.olite.app.ui.admin.AdminUsuariosFragment"
+        android:label="Admin Usuarios" />
+
+    <fragment
+        android:id="@+id/adminPedidosFragment"
+        android:name="com.olite.app.ui.admin.AdminPedidosFragment"
+        android:label="Admin Pedidos" />
+
+</navigation>

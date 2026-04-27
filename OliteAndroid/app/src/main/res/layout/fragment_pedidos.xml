@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoApp"
+    android:orientation="vertical">
+
+    <!-- Cabecera -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/dancing_script"
+        android:text="Mis Pedidos"
+        android:textColor="@color/colorLogoNaranja"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/tvSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp"
+        android:text="Tu historial de compras"
+        android:textColor="@color/textoSecundario"
+        android:textSize="13sp"
+        android:textStyle="italic" />
+
+    <!-- Estado vacío -->
+    <LinearLayout
+        android:id="@+id/layoutVacio"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_shopping_bag"
+            app:tint="@color/textoSecundario" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Aún no tienes pedidos"
+            android:textColor="@color/marronTierra"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Realiza tu primera compra desde el carrito"
+            android:textColor="@color/textoSecundario"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- Lista de pedidos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPedidos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp" />
+
+</LinearLayout>

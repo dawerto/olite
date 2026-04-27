@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuInicio"
+        android:icon="@drawable/ic_home"
+        android:title="Inicio" />
+
+    <item
+        android:id="@+id/menuCatalogo"
+        android:icon="@drawable/ic_grid_view"
+        android:title="Catálogo" />
+
+    <item
+        android:id="@+id/menuPedidos"
+        android:icon="@drawable/ic_shopping_bag"
+        android:title="Mis pedidos" />
+
+    <item
+        android:id="@+id/menuPerfil"
+        android:icon="@drawable/ic_person"
+        android:title="Mi perfil" />
+
+    <!-- Login (visible solo si NO hay sesión) -->
+    <item
+        android:id="@+id/menuLogin"
+        android:icon="@drawable/ic_person"
+        android:title="Iniciar sesión" />
+
+    <!-- Logout (visible solo si HAY sesión) -->
+    <item
+        android:id="@+id/menuLogout"
+        android:icon="@drawable/ic_remove"
+        android:title="Cerrar sesión" />
+
+</menu>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="colorPrimary">#5C3D2E</color>
+    <color name="colorPrimaryDark">#3d2518</color>
+    <color name="colorAccent">#C4703A</color>
+    <color name="fondoApp">#FAF8F5</color>
+    <color name="verdeOliva">#D4E5D0</color>
+    <color name="tierraBeige">#D9D9D9</color>
+    <color name="marronTierra">#5C3D2E</color>
+    <color name="rosaPalido">#E0BBBB</color>
+    <color name="negroSuave">#1E1E1E</color>
+    <color name="textoSecundario">#8a7a6a</color>
+    <color name="colorLogoNaranja">#C4703A</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="cardGris">#E8E6E1</color>
+</resources>

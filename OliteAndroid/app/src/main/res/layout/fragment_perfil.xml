@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoApp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Cabecera -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/dancing_script"
+            android:text="Mi Perfil"
+            android:textColor="@color/colorLogoNaranja"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="32dp"
+            android:textColor="@color/textoSecundario"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            tools:text="usuario@email.com" />
+
+        <!-- Nombre -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Nombre"
+            app:boxStrokeColor="@color/marronTierra"
+            app:hintTextColor="@color/marronTierra"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="@color/marronTierra" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Apellidos -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Apellidos"
+            app:boxStrokeColor="@color/marronTierra"
+            app:hintTextColor="@color/marronTierra"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="@color/marronTierra" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Dirección -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Dirección"
+            app:boxStrokeColor="@color/marronTierra"
+            app:hintTextColor="@color/marronTierra"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:textColor="@color/marronTierra" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Teléfono -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:hint="Teléfono"
+            app:boxStrokeColor="@color/marronTierra"
+            app:hintTextColor="@color/marronTierra"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textColor="@color/marronTierra" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Botón guardar cambios -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp"
+            android:text="Guardar cambios"
+            android:textColor="@color/blanco"
+            android:textSize="16sp"
+            app:backgroundTint="@color/colorLogoNaranja"
+            app:cornerRadius="24dp" />
+
+        <!-- Botón cerrar sesión -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCerrarSesion"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="Cerrar sesión"
+            android:textColor="@color/marronTierra"
+            android:textSize="16sp"
+            app:cornerRadius="24dp"
+            app:strokeColor="@color/marronTierra" />
+
+        <!-- Botón Panel Admin (visible solo si rol=ADMIN) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPanelAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:text="Panel de administración"
+            android:textColor="@color/blanco"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:backgroundTint="@color/marronTierra"
+            app:cornerRadius="24dp"
+            app:icon="@drawable/ic_shield"
+            app:iconTint="@color/blanco" />
+
+        <!-- Botón Admin Usuarios (visible solo si rol=ADMIN) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAdminUsuarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:padding="12dp"
+            android:text="Gestión de usuarios"
+            android:textColor="@color/blanco"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:backgroundTint="@color/marronTierra"
+            app:cornerRadius="24dp"
+            app:icon="@drawable/ic_person"
+            app:iconTint="@color/blanco" />
+
+        <!-- Botón Admin Pedidos (visible solo si rol=ADMIN) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAdminPedidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:padding="12dp"
+            android:text="Gestión de pedidos"
+            android:textColor="@color/blanco"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:backgroundTint="@color/marronTierra"
+            app:cornerRadius="24dp"
+            app:icon="@drawable/ic_shopping_bag"
+            app:iconTint="@color/blanco" />
+
+    </LinearLayout>
+</ScrollView>

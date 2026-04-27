@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="12dp"
+    app:cardBackgroundColor="@color/cardGris"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/imgProducto"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:background="@color/blanco" />
+
+        <TextView
+            android:id="@+id/tvNombreProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/marronTierra"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="Jabón Natural" />
+
+        <TextView
+            android:id="@+id/tvPrecioProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/marronTierra"
+            android:textSize="14sp"
+            tools:text="5,99€" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

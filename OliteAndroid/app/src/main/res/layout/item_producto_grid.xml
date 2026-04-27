@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardBackgroundColor="@color/blanco"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imgProducto"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@color/cardGris"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tvNombreProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:maxLines="2"
+            android:minLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/marronTierra"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="Jabón Natural de Avena" />
+
+        <TextView
+            android:id="@+id/tvPrecioProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/colorLogoNaranja"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="5,99€" />
+
+        <TextView
+            android:id="@+id/tvStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/textoSecundario"
+            android:textSize="11sp"
+            tools:text="Stock: 50" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
